@@ -1,42 +1,94 @@
-:root {
-  --bg-color: rgb(239, 248, 252);
-  --text-color: #333;
-  --primary-color: rgb(72, 168, 233);
-  --card-bg: white;
-  --input-bg: rgb(239, 248, 252);
-  --forecast-bg: white;
+/* ================== DARK MODE ================== */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #48a8e9;
+  --card-bg: #1e1e1e;
+  --input-bg: #2a2a2a;
+  --forecast-bg: #2a2a2a;
+  --button-bg: linear-gradient(135deg, #48a8e9 0%, #00c6ff 100%);
+  --button-hover-bg: linear-gradient(135deg, #2a8fd6 0%, #00aee0 100%);
+  --weather-bg: linear-gradient(135deg, #2b3a42 0%, #1b1f23 100%);
 }
 
-body {
+
+body.dark {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
 
 h1 {
   color: var(--primary-color);
 }
 
+#weather {
+  background: var(--weather-bg);
+  color: var(--text-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+#weather:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+
 section {
   background-color: var(--card-bg);
+  color: var(--text-color);
 }
+
 
 #cityInput {
   background-color: var(--input-bg);
   color: var(--text-color);
+  border: 1px solid #555;
 }
+
+#cityInput::placeholder {
+  color: #aaa;
+}
+
+#cityInput:focus {
+  border-color: #48a8e9;
+  box-shadow: 0 0 4px rgba(72, 168, 233, 0.7);
+  background-color: #3a3a3a;
+}
+
+#searchBtn, #refresh-btn {
+  background: var(--button-bg);
+  color: #fff;
+}
+
+#searchBtn:hover, #refresh-btn:hover {
+  background: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
 
 #forecastDays {
   background-color: var(--forecast-bg);
 }
 
-body.dark {
-  --bg-color: #121212;
-  --text-color: #eaeaea;
-  --primary-color: #48a8e9;
-  --card-bg: #1e1e1e;
-  --input-bg: #2a2a2a;
-  --forecast-bg: #1e1e1e;
+.forecast-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+.forecast-card:hover {
+  background: linear-gradient(135deg, #48a8e9 0%, #00c6ff 100%);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+#offline-indicator {
+  background-color: #b00020;
+  color: #fff;
+}
+
 /*=====================================================================*/
 
 
@@ -141,7 +193,7 @@ section {
   padding-right: 70px;
   padding-top: 30px;
 }
-#searchBtn {
+#searchBtn,#refresh-btn {
   padding: 8px;
   border: none;
   border-radius: 10px;
