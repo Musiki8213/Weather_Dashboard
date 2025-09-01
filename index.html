@@ -11,45 +11,43 @@
   <body>
     <div id="bigFlex">
       <div id="div1">
-    <div id="flexGreeting">
-      <div id="goodDiv">
-        <h1 id="greetingGood">Good</h1>
+        <div id="flexGreeting">
+          <div id="goodDiv">
+            <h1 id="greetingGood">Good</h1>
+          </div>
+          <div id="greetIconDiv">
+            <img id="greetingIcon" src="assets/afternoon.png" alt="afternoon" />
+          </div>
+        </div>
+        <h1 id="greeting"></h1>
+        <h3 id="fullDate"></h3>
+        <button id="theme-toggle">🌞 / 🌙</button>
+
+        <!-- OFFLINE INDICATOR -->
+        <div id="offline-indicator" style="display:none; color:white; background:red; padding:5px; margin:5px 0; text-align:center;">
+          You are offline
+        </div>
+
+        <!-- LAST UPDATED TIMESTAMP -->
+        <div id="last-updated" style="font-size:0.9em; color:#555; margin-top:5px;"></div>
+
+        <div id="forecast">
+          <div id="forecastDays"></div>
+        </div>
       </div>
-      <div id="greetIconDiv">
-        <img id="greetingIcon" src="assets/afternoon.png" alt="afternoon" />
+
+      <div id="sectionDiv">
+        <section>
+          <div id="inputDiv">
+            <input type="text" id="cityInput" placeholder="Search..." />
+            <button id="searchBtn">Search</button>
+             <button id="refresh-btn">Refresh</button>
+          </div>
+          <div id="weather"></div>
+          <div id="error" style="color:red; margin-top:5px;"></div>
+        </section>
       </div>
     </div>
-    <h1 id="greeting"></h1>
-    <h3 id="fullDate"></h3>
-    <button id="theme-toggle">🌞 / 🌙</button>
-
-<div id="forecast">
-    <!--<div id="foreH3Div"></div>
-  <br>-->
-  <div id="forecastDays">
-</div>
-  </div>
-</div>
-    <div id="sectionDiv">
-    <section>
-      <div id="inputDiv">
-    <input type="text" id="cityInput" placeholder="Search..." />
-
-    <button id="searchBtn">Search</button>
-
-    </div>
-    <div id="weather">
-      
-    </div>
-    <div id="error"></div>
-    </section>
-    
-    </div>
-    
-    
-
-</div>
-    
 
     <script src="script.js"></script>
   </body>
